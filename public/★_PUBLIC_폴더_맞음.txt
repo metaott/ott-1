@@ -1,0 +1,2 @@
+이 폴더가 Vite public 폴더입니다.
+이미지: public\자료\images 또는 자료\images

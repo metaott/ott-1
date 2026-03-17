@@ -1,0 +1,23 @@
+# ============================================
+# 자료 이미지 폴더 (public/자료/images)
+# ============================================
+# 프로젝트 루트의 [자료/images] 폴더 내용을 이 폴더에 넣어주세요.
+# 아래 파일명으로 넣으면 페이지에 자동 반영됩니다.
+#
+# [권장 파일명]
+#   hero-bg.jpg        - Hero 섹션 배경
+#   service-tv.jpg    - 서비스 소개 TV 화면 예시
+#   setop.jpg         - 4K UHD 셋톱박스
+#   remote.jpg        - 전용 리모컨
+#   effect1.jpg       - 도입효과 1 (고객 만족도)
+#   effect2.jpg       - 도입효과 2 (객실 경쟁력)
+#   effect3.jpg       - 도입효과 3 (부가 매출)
+#   effect4.jpg       - 도입효과 4 (케이블 비용 절감)
+#   case-hotel.jpg    - 적용 사례 호텔
+#   case-motel.jpg    - 적용 사례 모텔
+#   case-resort.jpg   - 적용 사례 리조트
+#   case-residence.jpg - 적용 사례 레지던스
+#   case-hospital.jpg - 적용 사례 병원
+#   testimonial-bg.jpg - 후기 섹션 배경 (선택)
+#
+# 확장자 .png, .webp 도 사용 가능 (파일명만 위와 맞추면 됨)

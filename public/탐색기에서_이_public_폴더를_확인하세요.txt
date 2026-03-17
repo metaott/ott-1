@@ -1,0 +1,9 @@
+이 파일이 보이면 public 폴더가 올바른 위치입니다.
+
+프로젝트 루트: dev_cur
+  └─ public          ← 지금 여기
+  └─ 자료
+       └─ images     ← PNG를 여기에 넣어도 됩니다 (npm run dev 시 자료/images 가 public 으로 복사됨)
+
+Cursor 왼쪽 파일 목록에서 dev_cur 폴더를 열었는지 확인하세요.
+Naver MYBOX 동기화 폴더라면, 동기화가 끝난 뒤 새로고침(F5) 하세요.
