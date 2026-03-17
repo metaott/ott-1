@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting…</title>
+    <script>
+      // SPA for GitHub Pages: 404로 들어온 경로를 index.html로 전달
+      // https://github.com/rafgraph/spa-github-pages 방식(간소화)
+      (function () {
+        var l = window.location;
+        var repoBase = '/ott'; // GitHub Pages repo path
+        var path = l.pathname.startsWith(repoBase) ? l.pathname.slice(repoBase.length) : l.pathname;
+        var newUrl =
+          repoBase +
+          '/?p=' +
+          encodeURIComponent(path || '/') +
+          '&q=' +
+          encodeURIComponent(l.search ? l.search.slice(1) : '') +
+          l.hash;
+        l.replace(newUrl);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+

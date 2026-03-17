@@ -52,6 +52,9 @@ function serveJaryoImages() {
 }
 
 export default defineConfig({
+  // GitHub Pages(https://rohuni.github.io/ott/)에서는 서브경로(/ott/)로 호스팅됨
+  // Actions에서 GITHUB_PAGES=true 로 빌드할 때만 base를 /ott/로 설정
+  base: process.env.GITHUB_PAGES === 'true' ? '/ott/' : '/',
   plugins: [
     serveJaryoImages(),
     react(),

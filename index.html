@@ -3,6 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- GitHub Pages SPA 라우팅(404 -> index) 복구용 -->
+    <script>
+      (function () {
+        var l = window.location;
+        if (l.search && l.search.indexOf('p=') !== -1) {
+          var params = {};
+          l.search
+            .slice(1)
+            .split('&')
+            .forEach(function (v) {
+              var a = v.split('=');
+              params[a[0]] = a.slice(1).join('=');
+            });
+          var p = params.p ? decodeURIComponent(params.p) : '';
+          var q = params.q ? decodeURIComponent(params.q) : '';
+          var newUrl = l.pathname + (p || '') + (q ? '?' + q : '') + l.hash;
+          window.history.replaceState(null, null, newUrl);
+        }
+      })();
+    </script>
     <title>메타코스모스 | 호텔·모텔 통합 OTT - 넷플릭스·디즈니플러스 월 1만원대</title>
     <meta name="description" content="(주)메타코스모스. 호텔, 모텔, 리조트 객실 TV에 넷플릭스, 디즈니+, 유튜브 등 7종 OTT 통합 제공. 4K 셋톱 무상임대, 실당 월 1만원대, 24시간 원격 A/S. 무료 방문 상담 신청." />
     <meta name="keywords" content="호텔 OTT, 호텔 넷플릭스, 모텔 스마트TV, 통합 OTT, 숙박 OTT, 호텔 IPTV, 메타코스모스, 집합건물 OTT, 호텔 TV 서비스, 디즈니플러스 호텔" />
