@@ -6,6 +6,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, '..');
 const src = join(root, '자료', 'images');
 const dest = join(root, 'public', '자료', 'images');
+const pdfSrc = join(root, '자료', 'meta_ott.pdf');
+const pdfDest = join(root, 'public', '자료', 'meta_ott.pdf');
 
 /** 항상 두 폴더를 만들어 탐색기에서 보이게 함 */
 mkdirSync(src, { recursive: true });
@@ -54,4 +56,16 @@ if (existsSync(src)) {
   } catch (e) {
     console.warn('[copy-images]', e.message);
   }
+}
+
+try {
+  if (existsSync(pdfSrc)) {
+    mkdirSync(dirname(pdfDest), { recursive: true });
+    cpSync(pdfSrc, pdfDest, { force: true });
+    console.log('[copy-images] 자료/meta_ott.pdf → public/자료/meta_ott.pdf');
+  } else {
+    console.log('[copy-images] 자료/meta_ott.pdf 파일이 없어 PDF 복사를 건너뜀');
+  }
+} catch (e) {
+  console.warn('[copy-images][pdf]', e.message);
 }

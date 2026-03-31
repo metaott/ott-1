@@ -7,56 +7,70 @@
     <script>
       (function () {
         var l = window.location;
-        if (l.search && l.search.indexOf('p=') !== -1) {
+        if (l.search && l.search.indexOf("p=") !== -1) {
           var params = {};
           l.search
             .slice(1)
-            .split('&')
+            .split("&")
             .forEach(function (v) {
-              var a = v.split('=');
-              params[a[0]] = a.slice(1).join('=');
+              var a = v.split("=");
+              params[a[0]] = a.slice(1).join("=");
             });
-          var p = params.p ? decodeURIComponent(params.p) : '';
-          var q = params.q ? decodeURIComponent(params.q) : '';
-          var newUrl = l.pathname + (p || '') + (q ? '?' + q : '') + l.hash;
+          var p = params.p ? decodeURIComponent(params.p) : "";
+          var q = params.q ? decodeURIComponent(params.q) : "";
+          var newUrl = l.pathname + (p || "") + (q ? "?" + q : "") + l.hash;
           window.history.replaceState(null, null, newUrl);
         }
       })();
     </script>
-    <title>메타코스모스 | 호텔·모텔 통합 OTT - 넷플릭스·디즈니플러스 월 1만원대</title>
-    <meta name="description" content="(주)메타코스모스. 호텔, 모텔, 리조트 객실 TV에 넷플릭스, 디즈니+, 유튜브 등 7종 OTT 통합 제공. 4K 셋톱 무상임대, 실당 월 1만원대, 24시간 원격 A/S. 무료 방문 상담 신청." />
-    <meta name="keywords" content="호텔 OTT, 호텔 넷플릭스, 모텔 스마트TV, 통합 OTT, 숙박 OTT, 호텔 IPTV, 메타코스모스, 집합건물 OTT, 호텔 TV 서비스, 디즈니플러스 호텔" />
+    <title>
+      메타코스모스 | 호텔·모텔 통합 OTT - 넷플릭스·디즈니플러스 월 1만원대
+    </title>
+    <meta
+      name="description"
+      content="(주)메타코스모스. 호텔, 모텔, 리조트 객실 TV에 넷플릭스, 디즈니+, 유튜브 등 7종 OTT 통합 제공. 4K 셋톱 무상임대, 실당 월 1만원대, 24시간 원격 A/S. 무료 방문 상담 신청."
+    />
+    <meta
+      name="keywords"
+      content="호텔 OTT, 호텔 넷플릭스, 모텔 스마트TV, 통합 OTT, 숙박 OTT, 호텔 IPTV, 메타코스모스, 집합건물 OTT, 호텔 TV 서비스, 디즈니플러스 호텔"
+    />
     <meta name="author" content="(주)메타코스모스" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://metacosmos.co.kr/" />
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="메타코스모스 - 호텔·모텔 통합 OTT" />
-    <meta property="og:description" content="투숙객이 먼저 찾는 객실. 넷플릭스부터 유튜브까지 월 1만원대로. 전국 800여 곳 도입." />
+    <meta
+      property="og:description"
+      content="투숙객이 먼저 찾는 객실. 넷플릭스부터 유튜브까지 월 1만원대로. 전국 800여 곳 도입."
+    />
     <meta property="og:url" content="https://metacosmos.co.kr/" />
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:site_name" content="메타코스모스" />
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="메타코스모스 - 호텔·모텔 통합 OTT" />
-    <meta name="twitter:description" content="넷플릭스·디즈니+·유튜브 등 7종 OTT, 실당 월 1만원대. 무료 상담 1833-8285" />
+    <meta
+      name="twitter:description"
+      content="넷플릭스·디즈니+·유튜브 등 7종 OTT, 실당 월 1만원대. 무료 상담 1833-8285"
+    />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "(주)메타코스모스",
-      "url": "https://metacosmos.co.kr",
-      "description": "호텔·모텔 대상 통합 OTT 서비스",
-      "telephone": "1833-8285",
-      "email": "ceometacosmos@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "항동 96-5 구로에이스캠프 B122호",
-        "addressLocality": "구로구",
-        "addressRegion": "서울"
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "(주)메타코스모스",
+        "url": "https://metacosmos.co.kr",
+        "description": "호텔·모텔 대상 통합 OTT 서비스",
+        "telephone": "1833-8285",
+        "email": "ceometacosmos@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "항동 96-5 구로에이스캠프 B122호",
+          "addressLocality": "구로구",
+          "addressRegion": "서울"
+        }
       }
-    }
     </script>
   </head>
   <body>

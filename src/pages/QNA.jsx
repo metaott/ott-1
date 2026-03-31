@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, HelpCircle } from 'lucide-react';
+import { ChevronDown, HelpCircle, FileDown } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const items = [
@@ -39,7 +39,7 @@ export default function QNA() {
   const canonical = window.location.origin + '/qna';
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-16">
+    <div className="max-w-3xl mx-auto px-4 py-16 relative">
       <Helmet>
         <title>Q&A | 메타코스모스</title>
         <meta
@@ -120,6 +120,14 @@ export default function QNA() {
           </motion.div>
         ))}
       </div>
+      <a
+        href="/자료/meta_ott.pdf"
+        download="meta_ott.pdf"
+        title="서비스 설명서 다운"
+        className="fixed bottom-5 right-4 z-50 w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/40 flex items-center justify-center hover:scale-105 hover:shadow-cyan-400/60 transition-all"
+      >
+        <FileDown size={22} />
+      </a>
     </div>
   );
 }

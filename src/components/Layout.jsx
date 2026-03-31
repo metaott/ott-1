@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation, Outlet } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, FileDown } from 'lucide-react';
 import { METACOSMOS_LOGO_DATA_URI } from '../assets/metacosmosLogo';
 
 export default function Layout({ children }) {
@@ -104,6 +104,14 @@ export default function Layout({ children }) {
       <div className="pt-16">
         <Outlet />
       </div>
+      <a
+        href="/자료/meta_ott.pdf"
+        download="meta_ott.pdf"
+        title="서비스 설명서 다운"
+        className="fixed right-4 top-1/2 -translate-y-1/2 z-50 w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/40 flex items-center justify-center hover:scale-105 hover:shadow-cyan-400/60 transition-all"
+      >
+        <FileDown size={22} />
+      </a>
     </div>
   );
 }
