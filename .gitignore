@@ -20,6 +20,10 @@ Thumbs.db
 # Vite
 *.local
 
+# Local nested repositories
+ott/
+ott-1/
+
 # Optional: large assets (uncomment if images should not be in repo)
 # 자료/images/*.png
 # 자료/images/*.jpg
